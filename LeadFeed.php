@@ -96,6 +96,8 @@ class LeadFeed extends FeedLogicBase {
 					$qq = "UPDATE as_asignacion 
 						   SET d_numero_prospectos = '".$nump."' WHERE as_asignacion.id = '".$id."'";
 					$re = $GLOBALS['db']->query($qq);
+// Asigna el agente seleccionado al prospecto
+					$bean->assigned_user_id = $row['user_id_c'];	
 					$sw = 1;
 				}    //   END WHILE	
 				
@@ -118,6 +120,8 @@ class LeadFeed extends FeedLogicBase {
 						$qq = "UPDATE as_asignacion 
 							SET d_numero_prospectos = '".$nump."' WHERE as_asignacion.id = '".$id."'";
 						$re = $GLOBALS['db']->query($qq);
+// Asigna el agente seleccionado al prospecto
+						$bean->assigned_user_id = $row['user_id_c'];					
 					}    //   END WHILE				
 			}    //   END IF $sw 
 	
@@ -154,6 +158,8 @@ class LeadFeed extends FeedLogicBase {
 					$qq = "UPDATE as_asignacion 
 						   SET d_numero_prospectos = '".$nump."' WHERE as_asignacion.id = '".$id."'";
 					$re = $GLOBALS['db']->query($qq);
+// Asigna el agente seleccionado al prospecto
+					$bean->assigned_user_id = $row['user_id_c'];	
 					$sw = 1;
 				}    //   END WHILE	
 
@@ -179,6 +185,11 @@ class LeadFeed extends FeedLogicBase {
 					$qq = "UPDATE as_asignacion 
 						   SET d_numero_prospectos = '".$nump."' WHERE as_asignacion.id = '".$id."'";
 					$re = $GLOBALS['db']->query($qq);
+// Asigna el agente seleccionado al prospecto
+//					$qq = "UPDATE leads
+//						   SET assigned_user_id = '".$row['user_id_c']."' WHERE leads.id = '".$id."'";
+
+					$bean->assigned_user_id = $row['user_id_c'];					
 				}    //   END WHILE						
 				}  //  END IF SW 
 				
